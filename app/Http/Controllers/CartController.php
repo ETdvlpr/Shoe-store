@@ -55,6 +55,6 @@ class CartController extends Controller
     }
     public function clear(){
         \Cart::clear();
-        return redirect()->route('cart')->with('success', 'Cart is cleared');
+        return redirect()->route('cart.index')->with('success', 'Cart is cleared');
     }
 }

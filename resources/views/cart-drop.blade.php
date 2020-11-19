@@ -12,7 +12,7 @@
                     <br><small>Qty: {{$shoe->quantity}}</small>
                 </div>
                 <div class="col-lg-3">
-                    <p>{{ \Cart::get($shoe->id)->getPriceSum() }} {{$shoe->attributes->currency}}</p>
+                    <p>{{ number_format(\Cart::get($shoe->id)->getPriceSum()) }} {{$shoe->attributes->currency}}</p>
                 </div>
                 <hr>
             </div>
@@ -22,7 +22,7 @@
     <li class="list-group-item">
         <div class="row">
             <div class="col-lg-10">
-                <b>Total: </b>${{ \Cart::getTotal() }}
+                <b>Total: </b>{{ number_format(\Cart::getTotal()) }}
             </div>
             <div class="col-lg-2">
                 <form action="{{ route('cart.clear') }}" method="POST">
