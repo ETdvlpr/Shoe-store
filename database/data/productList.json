@@ -1,0 +1,16 @@
+[
+    {"id": 1, "name": "All star", "price": 1300, "currency": "ETB", "image": "/images/All star.jpg"},
+    {"id": 2, "name": "Blue vans", "price": 1500, "currency": "ETB", "image": "/images/Blue vans.jpg"},
+    {"id": 3, "name": "Fila", "price": 2000, "currency": "ETB", "image": "/images/Fila.jpg"},
+    {"id": 4, "name": "Leather brown", "price": 1000, "currency": "ETB", "image": "/images/Leather brown.jpg"},
+    {"id": 5, "name": "Air Jordans", "price": 3000, "currency": "ETB", "image": "/images/Air jordans.jpg"},
+    {"id": 6, "name": "Red heels", "price": 1500, "currency": "ETB", "image": "/images/Red heels.jpg"},
+    {"id": 7, "name": "Brown heels", "price": 1200, "currency": "ETB", "image": "/images/womens brown heel.jpg"},
+    {"id": 8, "name": "Leather dark", "price": 1000, "currency": "ETB", "image": "/images/Leather dark.jpg"},
+    {"id": 9, "name": "Nike", "price": 1600, "currency": "ETB", "image": "/images/Nike.jpg"},
+    {"id": 10, "name": "Adidas", "price": 1200, "currency": "ETB", "image": "/images/Adidas.jpg"},
+    {"id": 11, "name": "Reebok", "price": 1400, "currency": "ETB", "image": "/images/Reebok.jpg"},
+    {"id": 12, "name": "Sandals", "price": 800, "currency": "ETB", "image": "/images/Sandals.jpg"},
+    {"id": 13, "name": "Yellow heels", "price": 1700, "currency": "ETB", "image": "/images/Yellow heels.jpg"},
+    {"id": 14, "name": "Vans", "price": 1200, "currency": "ETB", "image": "/images/Vans.jpg"}
+]
