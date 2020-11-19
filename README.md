@@ -25,15 +25,23 @@ Run composer install from with in the 'shoe-store' directory:
 ## Set up
 Make .env file and create database credentials.
 
+    cp .env.example .env
     php artisan key:generate
-    php artisan migrate
-    php artisan db:seed
+    php artisan migrate --seed
 
 All done.
 
 ## Screenshots
 
-![Home page](/screenshot/home.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Cart view from home](/screenshot/home_drop_cart.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Cart](/screenshot/cart.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Checkout page](/screenshot/checkout.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Invoice](/screenshot/invoice.PNG)
+![Home page](/screenshot/home.PNG)
+---
+![Cart view from home](/screenshot/home_drop_cart.PNG)
+---
+![Cart](/screenshot/cart.PNG)
+---
+![Checkout page](/screenshot/checkout.PNG)
+---
+![Invoice](/screenshot/invoice.PNG)
 
 ## License
 
