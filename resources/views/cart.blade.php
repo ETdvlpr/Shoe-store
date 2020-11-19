@@ -67,8 +67,8 @@
                 <li class="list-group-item"><b>Total: </b>{{ number_format(\Cart::getTotal()) }}</li>
             </ul>
         </div>
-        <br><a href="/shop" class="btn btn-dark">Continue Shopping</a>
-        <a href="/checkout" class="btn btn-success">Proceed To Checkout</a>
+        <br><a href="{{ route('home') }}" class="btn btn-dark">Continue Shopping</a>
+        <a href="{{ route('checkout') }}" class="btn btn-success">Proceed To Checkout</a>
     </div>
     @endif
 </div>
