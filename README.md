@@ -33,6 +33,8 @@ All done.
 
 ## Screenshots
 
+![Home page](/screenshot/home.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Cart view from home](/screenshot/home_drop_cart.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Cart](/screenshot/cart.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Checkout page](/screenshot/checkout.PNG)&nbsp;&nbsp;&nbsp;&nbsp;![Invoice](/screenshot/invoice.PNG)
+
 ## License
 
 This app licensed under the [MIT license](https://opensource.org/licenses/MIT).
