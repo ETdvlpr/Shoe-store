@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Darryldecode\Cart\Facades\CartFacade as Cart;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -13,7 +14,7 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-    	$cartItems = \Cart::getContent();
+    	$cartItems = Cart::getContent();
     	return view('checkout')->with(['cartItems' => $cartItems]);
     }
     /**
@@ -24,8 +25,8 @@ class CheckoutController extends Controller
      */
     public function pay(Request $request)
     {
-    	$total = \Cart::getTotal();
-    	\Cart::clear();
+    	$total = Cart::getTotal();
+    	Cart::clear();
     	return view('invoice')->with(['total' => $total, 'billing' => $request]);
     }
 }

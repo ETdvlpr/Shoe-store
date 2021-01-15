@@ -42,16 +42,10 @@
             <div class="text-center card-footer">
 
                 <form action="{{ route('cart.store') }}" method="POST">
-                    {{ csrf_field() }}
-                    <input type="hidden" value="{{ $product->id }}" name="id">
-                    <input type="hidden" value="{{ $product->name }}" name="name">
-                    <input type="hidden" value="{{ $product->price }}" name="price">
-                    <input type="hidden" value="{{ $product->image }}" name="image">
-                    <input type="hidden" value="{{ $product->currency }}" name="currency">
-                    <input type="hidden" value="1" id="quantity" name="quantity">
-                    <button href="javascript:void(0)" class="btn btn-primary btn-sm mt-4 mb-4"><i class="fa fa-shopping-cart pr-2"></i> Add to cart</button>
+                    @csrf
+                    <button name="id" value="{{ $product->id }}" class="btn btn-primary btn-sm mt-4 mb-4"><i class="fa fa-shopping-cart pr-2"></i> Add to cart</button>
                 </form>
-                
+
             </div>
         </div>
     </div>
@@ -65,7 +59,7 @@
     <div class="mx-auto">
 
         {{ $products->links() }}
-        
+
     </div>
 </div>
 @endsection

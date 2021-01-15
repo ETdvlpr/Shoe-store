@@ -21,13 +21,13 @@
     <br>
     <li class="list-group-item">
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-8">
                 <b>Total: </b>{{ number_format(\Cart::getTotal()) }}
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-4">
                 <form action="{{ route('cart.clear') }}" method="POST">
                     {{ csrf_field() }}
-                    <button class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn-secondary btn-sm">Clear  <i class="fa fa-trash"></i></button>
                 </form>
             </div>
         </div>

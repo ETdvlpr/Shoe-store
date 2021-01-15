@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Darryldecode\Cart\Facades\CartFacade as Cart;
 use Illuminate\Http\Request;
 use App\Product;
 
@@ -14,14 +15,15 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function add(Request$request){
-    	\Cart::add([
-    		'id' => $request->id,
-    		'name' => $request->name,
-    		'price' => $request->price,
-    		'quantity' => $request->quantity,
+        $shoe = Product::find($request->id);
+    	Cart::add([
+    		'id' => $shoe->id,
+    		'name' => $shoe->name,
+    		'price' => $shoe->price,
+    		'quantity' => 1,
     		'attributes' => [
-    			'image' => $request->image,
-    			'currency' => $request->currency
+    			'image' => $shoe->image,
+    			'currency' => $shoe->currency
     		]
     	]);
     	return redirect()->back()->with('success', 'Shoe Added to Cart');
@@ -34,7 +36,7 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function cart()  {
-    	$cartCollection = \Cart::getContent();
+    	$cartCollection = Cart::getContent();
     	return view('cart')->with(['cartCollection' => $cartCollection]);
     }
 
@@ -45,7 +47,7 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function remove(Request $request){
-    	\Cart::remove($request->id);
+    	Cart::remove($request->id);
     	return redirect()->route('cart.index')->with('success', 'Shoe removed from cart');
     }
 
@@ -56,7 +58,7 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request){
-    	\Cart::update($request->id,
+    	Cart::update($request->id,
     		[
     			'quantity' => [
     				'relative' => false,
@@ -72,7 +74,7 @@ class CartController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function clear(){
-        \Cart::clear();
+        Cart::clear();
         return redirect()->route('cart.index')->with('success', 'Cart is cleared');
     }
 }

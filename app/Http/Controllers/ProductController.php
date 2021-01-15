@@ -14,8 +14,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $search = $request['search'];
-        $products = Product::where('name','LIKE',"%$search%")->paginate(9);
+        $products = Product::where('name','LIKE',"%$request->search%")->paginate(9);
         return view('shoes', ['products'=>$products]);
     }
 }
